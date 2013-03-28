@@ -86,7 +86,7 @@ public class WellCheckClinic
 		telephoneNumber = newNumber;
 	}
 
-	public void setAddress(int newAddress)
+	public void setAddress(String newAddress)
 	{
 		address =  newAddress;
 	}

@@ -6,18 +6,17 @@ public class Patient
 	//---------Default constructor for Patient Class---------//
 	public Patient()
 	{
-		insuranceInfo = 0;
-		clinic(0,0,0,"",0,0);
+		insuranceInfo = "";
 	}
 
 	//---------Constructor with access to change variables to desired values---------//
-	public Pateint(int bloodPressure, int weight, int sugarLevel, String address, int phoneNumber, int insuranceInfo)
+	public Patient(int bloodPressure, int weight, int sugarLevel, String address, int phoneNumber, String insuranceInfo)
 	{
-		clinic.getBloodPresssure(bloodPressure);
-		clninc.getWeight(weight);
-		clinic.getSugarLevel(sugarLevel);
-		clinic.getAddress(address);
-		clinic.phoneNumber(phoneNumber);
+		clinic.setBloodPressure(bloodPressure);
+		clinic.setWeight(weight);
+		clinic.setSugarLevel(sugarLevel);
+		clinic.setAddress(address);
+		clinic.setTelephoneNumber(phoneNumber);
 		this.insuranceInfo = insuranceInfo;
 	}
 
@@ -39,7 +38,7 @@ public class Patient
 
 	public void setAddress(String newAddress)
 	{
-		clinic.setAddress(newAddress)
+		clinic.setAddress(newAddress);
 	}
 
 	public void setPhoneNumber(int newPhoneNumber)
@@ -56,7 +55,7 @@ public class Patient
 	//---------Begin getter block for protected variables---------//
 	public int getBloodPresssure()
 	{
-		return clinic.getbloodPressure();
+		return clinic.getBloodPressure();
 	}
 
 	public int getWeight()
