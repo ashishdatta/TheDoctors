@@ -68,7 +68,34 @@ public class WellCheckClinic
 	{
 		return(patientCount);
 	}
-	
+	//---------End getter block for protected variables-----------//
+
+	//---------Begin setter block for protected Variables---------//
+	public void setBloodPressure(int newBloodPressure)
+	{
+		bloodPressure = newBloodPressure;
+	}
+
+	public void setSugarLevel(int newSugarLevel)
+	{
+		sugarLevel = newSugarLevel;
+	}
+
+	public void setTelephoneNumber(int newNumber)
+	{
+		telephoneNumber = newNumber;
+	}
+
+	public void setAddress(int newAddress)
+	{
+		address =  newAddress;
+	}
+
+	public void setWeight(int newWeight)
+	{
+		weight = newWeight;
+	}
+	//---------End setter block for protected variables---------//
 	
 	//Method 10 toString
 	public String toString()
