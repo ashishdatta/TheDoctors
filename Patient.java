@@ -10,7 +10,7 @@ public class Patient
 	}
 
 	//---------Constructor with access to change variables to desired values---------//
-	public Patient(int bloodPressure, int weight, int sugarLevel, String address, int phoneNumber, String insuranceInfo)
+	public Patient(int bloodPressure, int weight, int sugarLevel, String address, long phoneNumber, String insuranceInfo)
 	{
 		clinic.setBloodPressure(bloodPressure);
 		clinic.setWeight(weight);
@@ -73,7 +73,7 @@ public class Patient
 		return clinic.getAddress();
 	}
 
-	public int getPhoneNumber()
+	public long getPhoneNumber()
 	{
 		return clinic.getTelephoneNumber();
 	}
