@@ -1,22 +1,34 @@
 
 public class WellCheckClinic 
 {
+	//Instance Data
 	protected String patientName;
 	protected String address;
-	protected int telephoneNumber;
+	protected String healthRecord;
+	protected String observation;
+	protected String nurseRecommendaiton;
+	protected String appointment;
+	protected String prescription;
+	
+	protected long telephoneNumber;
 	protected int bloodPressure;
 	protected int sugarLevel;
 	protected int weight;
-	protected int healthRecord;
-	protected int patientTotal;
 	
 	private static int patientCount;		//Static Instance Variable
 	
+	
+	
+	
+	
+	
 	//Constructor: Contains name of patient entered into our database by the Patient.
-	public WellCheckClinic(String thePatient, int theTelephoneNumber, int theBloodPressure, 
-																	  int theSugarLevel, int theWeight )
+	public WellCheckClinic(String thePatient, String theHealthRecord, int theBloodPressure, int theSugarLevel, int theWeight, 
+									String theAddress, long theTelephoneNumber)
 	{
 		patientName = thePatient; 
+		healthRecord = theHealthRecord;
+		address = theAddress;
 		telephoneNumber = theTelephoneNumber;
 		bloodPressure = theBloodPressure;
 		sugarLevel = theSugarLevel;
@@ -24,6 +36,7 @@ public class WellCheckClinic
 		
 		patientCount++;
 	}
+	
 	
 	
 	
@@ -48,59 +61,123 @@ public class WellCheckClinic
 		return weight;
 	}
 	
-	
-
-	
 	//Method 4
-	public int getTelephoneNumber()
+	public long getTelephoneNumber()
 	{
 		return telephoneNumber;
 	}
 	
 	//Method 5
+	public String getPrescription()
+	{
+		return prescription;
+	}
+	
+	//Method 6
 	public String getAddress()
 	{
 		return address;
 	}
 	
-	//Method 6
+	//Method 7
+	public String getObservation()
+	{
+		return observation;
+	}
+	
+	//Method 8
+	public String getHealthRecord()
+	{
+		return healthRecord;
+	}
+	
+	//Method 9  Nurse
+	public String getNurseRecommendaiton()
+	{
+		return nurseRecommendaiton;
+	}
+	
+	//Method 10
+	public String getAppointment()
+	{
+		return appointment;
+	}
+	
+	//Method 11
+	public void setPatientName(String thePatient)
+	{
+			patientName = thePatient;
+	}
+	
+	//Method 12
+	public void setAddress(String theAddress)
+	{
+			address = theAddress;
+	}
+	
+	//Method 13
+	public void setHealthRecord(String theHealthRecord)
+	{
+		 	healthRecord = theHealthRecord;
+	}
+	
+	//Method 14
+	public void setTelephoneNumber(long theTelephoneNumber)
+	{
+			
+		
+			telephoneNumber = theTelephoneNumber;
+	}
+	
+	//Method 15
+	public void setBloodPressure(int theBloodPressure)
+	{
+			bloodPressure = theBloodPressure;
+	}
+	
+	//Method 16
+	public void setSugarLevel(int theSugarLevel)
+	{
+			sugarLevel = theSugarLevel;
+	}
+	
+	//Method 17
+	public void setWeight(int theWeight)
+	{
+			weight = theWeight;
+	}
+	
+	//Method 18
+	public void setObservation(String info)
+	{
+		observation = info;
+	}
+	
+	//Method 19
+	public void setAppointment(String theAppointment)
+	{
+		appointment = theAppointment;
+	}
+	
+	//Method 20
+	public void setPrescriptio(String thePrescription)
+	{
+		prescription = thePrescription;
+	}
+	
+	
+	
+	//Method 21: STATIC METHOD
 	public static int getPatientCount()
 	{
 		return(patientCount);
 	}
-	//---------End getter block for protected variables-----------//
-
-	//---------Begin setter block for protected Variables---------//
-	public void setBloodPressure(int newBloodPressure)
-	{
-		bloodPressure = newBloodPressure;
-	}
-
-	public void setSugarLevel(int newSugarLevel)
-	{
-		sugarLevel = newSugarLevel;
-	}
-
-	public void setTelephoneNumber(int newNumber)
-	{
-		telephoneNumber = newNumber;
-	}
-
-	public void setAddress(String newAddress)
-	{
-		address =  newAddress;
-	}
-
-	public void setWeight(int newWeight)
-	{
-		weight = newWeight;
-	}
-	//---------End setter block for protected variables---------//
 	
-	//Method 10 toString
+	
+	//Method 22: toString
 	public String toString()
 	{
-		return("Patient" + patientName + "\t" + "Address" + address + "\t" + "telephone number " + telephoneNumber);
+		return("Patient: " + patientName + "\n" + "HealthRecord: " + healthRecord+ "\n"  + "Address: " + address + "\n" + "TelephoneNumber: " + telephoneNumber);
 	}
 	
 
