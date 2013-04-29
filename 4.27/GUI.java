@@ -9,8 +9,17 @@ public class GUI
 		String title, bloodPressure, patientFirstName, patientSurname, weight, sugarLevel, user;  
 		int continueProgram = 0;
 		
-		user = JOptionPane.showInputDialog("Please enter your occupation: (Doctor, Nurse or Patient");
-		do
+		user = JOptionPane.showInputDialog("Please enter your occupation: (Doctor, Nurse or Patient)");
+
+		System.out.println(user);
+		if(user == "2")
+		{
+			System.out.println("Complete");
+			JOptionPane.showMessageDialog(null, info.toString());
+			
+		}
+		System.out.println(user);
+		while(user == "Nurse".toLowerCase())
 		{
 			do
 			{
@@ -26,8 +35,8 @@ public class GUI
 				info.addMedicalData(Double.parseDouble(weight), bloodPressure, Integer.parseInt(sugarLevel));
 				
 			}while(continueProgram == JOptionPane.YES_OPTION);
-		}while(user == "Nurse".toLowerCase());
-		JOptionPane.showMessageDialog(null, info.toString());
+		}
+			//JOptionPane.showMessageDialog(null, info.toString());
 		
 		
 		
