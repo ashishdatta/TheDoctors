@@ -49,7 +49,7 @@ public class Database
 	}
 	
 	//Method3: add Medical data
-	public void addMedicalData(double Weight, int BloodPressure, int SugarLevel)
+	public void addMedicalData(double Weight, String BloodPressure, int SugarLevel)
 	{
 		
 		//Check to see if Medical[] array needs to be increased

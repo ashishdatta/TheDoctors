@@ -4,20 +4,20 @@ public class Medical
 {
 	//Instance Data
 	private double Weight;
-	private int BloodPressure;
+	private String BloodPressure;
 	private int SugarLevel;
 	
 	//Constructor1
 	public Medical()
 	{
 		Weight = 0;
-		BloodPressure = 0;
+		BloodPressure = "";
 		SugarLevel = 0;
 	}
 	
 	
 	//Constructor2
-	public Medical(double theWeight, int theBloodPressure, int theSugarLevel)
+	public Medical(double theWeight, String theBloodPressure, int theSugarLevel)
 	{
 		Weight = theWeight;
 		BloodPressure = theBloodPressure;
@@ -37,13 +37,13 @@ public class Medical
 	}
 	
 	//Method 3
-	public int getBloodPressure()
+	public String getBloodPressure()
 	{
 		return BloodPressure;
 	}
 	
 	//Method 4 
-	public void setBloodPressure(int theBloodPressure)
+	public void setBloodPressure(String theBloodPressure)
 	{
 		BloodPressure = theBloodPressure;
 	}
@@ -76,7 +76,7 @@ public class Medical
 		{
 			System.out.print("Please Enter your Blood Pressure: ");
 			Scanner scan = new Scanner(System.in);
-			BloodPressure = scan.nextInt();
+			BloodPressure = scan.nextLine(); 
 			
 			
 			
@@ -98,8 +98,8 @@ public class Medical
 	//Method 10 ToString
 	public String toString()
 	{
-		return("Weight: " + Weight + "\t" + "BloodPressure" + BloodPressure + "\t" +
-				"SugarLevel: " + SugarLevel);
+		return("Weight: " + Weight + "\t" + "  BloodPressure: " + BloodPressure + "\t" +
+				"  SugarLevel: " + SugarLevel);
 	}
 }
 
