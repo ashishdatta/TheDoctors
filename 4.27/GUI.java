@@ -6,26 +6,23 @@ public class GUI
 	{
 		Database info = new Database();
 		Medical val = new Medical();
-		String title, bloodPressure, patientFirstName, patientSurname, weight, sugarLevel, user;  
-		int continueProgram = 0;
+		String title, bloodPressure, patientFirstName, patientSurname, weight, sugarLevel, user, prescription;
+		int continueProgram = 1;
 		
 		user = JOptionPane.showInputDialog("Please enter your occupation: (Doctor, Nurse or Patient)");
 
-		System.out.println(user);
-		if(user == "2")
+		if(user.equals("Patient"))
 		{
-			System.out.println("Complete");
-			JOptionPane.showMessageDialog(null, info.toString());
-			
+			JOptionPane.showMessageDialog(null, info.toString());	
 		}
-		System.out.println(user);
-		while(user == "Nurse".toLowerCase())
+		
+		while(user.equals("Nurse"))
 		{
 			do
 			{
 				patientFirstName = JOptionPane.showInputDialog("Patient First Name: ");
 				patientSurname = JOptionPane.showInputDialog("Patient Last Name: ");
-				bloodPressure = JOptionPane.showInputDialog("Blood Pressure: (Use ' . ' instead of ' / ')");
+				bloodPressure = JOptionPane.showInputDialog("Blood Pressure: ");
 				weight = JOptionPane.showInputDialog("Weight: ");
 				sugarLevel = JOptionPane.showInputDialog("Sugar Level: ");
 				
@@ -35,6 +32,27 @@ public class GUI
 				info.addMedicalData(Double.parseDouble(weight), bloodPressure, Integer.parseInt(sugarLevel));
 				
 			}while(continueProgram == JOptionPane.YES_OPTION);
+			user = "" ;
+		}
+		
+		while(user.equals("Doctor"))
+		{
+			do
+			{
+				prescription = JOptionPane.showInputDialog("Prescription(s): (Seperate by commas)");
+				patientFirstName = JOptionPane.showInputDialog("Patient First Name: ");
+				patientSurname = JOptionPane.showInputDialog("Patient Last Name: ");
+				bloodPressure = JOptionPane.showInputDialog("Blood Pressure: ");
+				weight = JOptionPane.showInputDialog("Weight: ");
+				sugarLevel = JOptionPane.showInputDialog("Sugar Level: ");
+				
+				
+				continueProgram = JOptionPane.showConfirmDialog(null, "Add another patient?");
+				info.addPatient(patientFirstName, patientSurname);
+				info.addMedicalData(Double.parseDouble(weight), bloodPressure, Integer.parseInt(sugarLevel));
+				
+			}while(continueProgram == JOptionPane.YES_OPTION);
+			user = "" ;
 		}
 			//JOptionPane.showMessageDialog(null, info.toString());
 		
